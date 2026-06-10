@@ -176,13 +176,13 @@
   --system-status-font-size-reset: 0;
   
   --system-status-text: "Chat byl ukončen";
-  --system-status-color: #656D75;
+  --system-status-color: #FFFFFF;
   --system-status-size: 13.5px;
   --system-status-weight: 700;
   --system-status-line-height: 1.4;
   --system-status-bg: transparent;
   --system-status-padding: 0;
-  --system-status-line-color: #656D75;
+  --system-status-line-color: #FFFFFF;
 
 
 
