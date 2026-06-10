@@ -1,0 +1,66 @@
+```html
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI asistent městyse Nezamyslice</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background-image: url('https://trixtecheu.github.io/municipalities/nezamyslice/images/nezamyslice-background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script src="https://trixtecheu.github.io/municipalities/nezamyslice/extensions/TranslateWidget.js"></script>
+
+  <script type="text/javascript">
+    (function(document, tagName) {
+      const voiceflowScript = document.createElement(tagName);
+      const firstScript = document.getElementsByTagName(tagName)[0];
+
+      voiceflowScript.onload = function() {
+        try {
+          window.voiceflow.chat.load({
+            verify: {
+              projectID: '6a1435a78959bc84160c72be'
+            },
+            url: 'https://general-runtime.voiceflow.com',
+            voice: {
+              url: 'https://runtime-api.voiceflow.com'
+            },
+            assistant: {
+              stylesheet: 'https://trixtecheu.github.io/municipalities/nezamyslice/styles-nezamyslice.css'
+            }
+          });
+        } catch (error) {
+          console.error('Chyba při načítání AI asistenta městyse Nezamyslice:', error);
+        }
+      };
+
+      voiceflowScript.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+      voiceflowScript.type = 'text/javascript';
+
+      firstScript.parentNode.insertBefore(voiceflowScript, firstScript);
+    })(document, 'script');
+  </script>
+
+</body>
+</html>
+```
