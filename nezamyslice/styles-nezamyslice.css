@@ -1,0 +1,445 @@
+/* TrixTech s.r.o. @2026 */
+@import url('https://trixtecheu.github.io/municipalities/css/config-default.css');
+
+:host {
+  /* 1) Header and avatar */
+  --header-height: 65px;
+  --header-bg: linear-gradient(to right, #3E68A7, #29456F);
+  --header-padding: 12px 16px 16px 14px;
+  --header-border: none;
+  --header-border-radius: 0;
+  --header-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --header-z-index: 10;
+
+  /* Avatar image in header */
+  --header-avatar-height: 145%;
+  --header-avatar-max-height: 145%;
+  --header-avatar-radius: 0;
+
+
+  /* 2) Header icons (refresh, close) */
+  /* Base Settings */
+  --icon-base-transform: translate(-50%, -50%) scale(1);
+  --icon-base-filter: brightness(1);
+  --icon-transition: transform .6s ease-in-out, filter .8s ease-in-out;
+  --icon-btn-size: 40px;
+  --icon-focus-color: rgba(0, 123, 204, 0.35);
+  --icon-focus-radius: 8px;
+
+  /* Refresh Icon */
+  --icon-refresh-url: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-refresh.svg");
+  --icon-refresh-size: 38px;
+  --icon-refresh-opacity: 0.8;
+  --icon-refresh-opacity-hover: 1;
+
+  /* Close Icon */
+  --icon-close-url: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-close.svg");
+  --icon-close-size: 28px;
+  --icon-close-opacity: 0.8;
+  --icon-close-opacity-hover: 1;
+
+
+  /* 3) System buttons (start new chat, cancel) */
+  /* 3.1) Shared Geometry & Typography */
+  --btn-font-size: 16px;
+  --btn-font-weight: 700;
+  --btn-letter-spacing: 0.05em;
+  --btn-padding: 16px;
+  --btn-radius: 30px;
+  --btn-focus-shadow: rgba(0, 123, 204, 0.25);
+
+  /* 3.2) START Button Configuration */
+  --btn-start-text: "Spustit nový chat";
+  --btn-border-width: 2px;
+  --btn-start-transition: background .2s ease;
+  
+  /* Start - Default */
+  --btn-start-bg: #29456F;
+  --btn-start-text-color: #FFF600;
+  --btn-start-border: #29456F;
+  
+  /* Start - Hover */
+  --btn-start-bg-hover: #29456F;
+  --btn-start-text-color-hover: #FFF600;
+  --btn-start-border-hover: #29456F;
+  
+  /* Start - Shine Effect */
+  --btn-shine-display: none;
+
+  /* 3.3) CANCEL Button Configuration */
+  --btn-cancel-text: "Zrušit";
+  --btn-cancel-border-width: 2px;
+  
+  /* Cancel - Default */
+  --btn-cancel-bg: #FFFFFF;
+  --btn-cancel-text-color: #1A1E23;
+  --btn-cancel-border: #FFFFFF;
+  
+  /* Cancel - Hover */
+  --btn-cancel-bg-hover: #F7F7F7;
+  --btn-cancel-text-color-hover: #1A1E23;
+  --btn-cancel-border-hover: #F7F7F7;
+
+
+  /* 4) Prompt window background */
+  --prompt-bg-color: #6a83a9;
+
+
+  /* 5) Chat background and footer strip */
+  --chat-bg-image: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/nezamyslice-bc.jpg");
+  --chat-bg-size: cover;
+  --chat-bg-repeat: no-repeat;
+  --chat-bg-position: center center;
+  --chat-bg-color-overlay: transparent;
+
+  --footer-bg-color: transparent;
+  
+  /* Footer Start Button */
+  --footer-start-btn-bg: #FFFFFF;
+  --footer-start-btn-bg-image: none;
+  --footer-start-btn-shadow: none;
+  --footer-start-btn-border: none;
+  --footer-start-btn-opacity: 1;
+
+
+  /* 6) Chatbot avatar (next to assistant messages) */
+  --chat-avatar-width: 38px;
+  --chat-avatar-height: 38px;
+  --chat-avatar-radius: 50%;
+
+
+  /* 7) Chat bubbles and text */
+  --message-text-align: left;
+  --message-margin-left: 0;
+  --chat-bubble-radius: 20px;
+  --system-msg-bg-color: #EDF0F7;
+
+  /* User Message (Right) */
+  --user-msg-bg: #3E68A7;
+  --user-msg-text-color: #FFFFFF;
+  --user-msg-weight: 600;
+  --user-msg-size: 15.5px;
+  --user-msg-padding: 12px 16px;
+  --user-msg-width: fit-content;
+  --user-msg-shadow: none;
+  --user-msg-border: none;
+
+  /* System Message (Left) */
+  --system-msg-size: 15.5px;
+  --system-msg-line-height: 21px;
+  --system-msg-text-color: #000000;
+  --system-msg-weight: normal;
+  --system-msg-letter-spacing: normal;
+
+
+  /* 8) Main action buttons (in assistant replies) */
+  /* Container */
+  --main-btn-container-padding: 50px;
+  --main-btn-alignment: flex-start;
+  --main-btn-flex-wrap: wrap;
+  --main-btn-gap: 8px;
+
+  /* Button Styling */
+  --main-btn-font-size: 15px;
+  --main-btn-font-weight: 700;
+  --main-btn-letter-spacing: 0.05em;
+  --main-btn-height: 40px;
+  --main-btn-padding: 24px 20px;
+  --main-btn-radius: 30px;
+  --main-btn-margin: 0;
+  --main-btn-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --main-btn-line-height: normal;
+  --main-btn-overflow: hidden;
+  --main-btn-cursor: pointer;
+  --main-btn-transition: background .2s ease, color .2s ease;
+  
+  --main-btn-focus-outline: none;
+  --main-btn-focus-shadow: 0 0 0 3px rgba(0, 123, 204, 0.25);
+
+  /* Default State */
+  --main-btn-bg: #FFF600;
+  --main-btn-text-color: #000000;
+  --main-btn-border: none;
+  
+  /* Hover State */
+  --main-btn-bg-hover: #29456F;
+  --main-btn-text-color-hover: #FFF600;
+  --main-btn-border-hover: none;
+
+  /* Shine Effect */
+  --main-btn-shine-display: none;
+
+
+  /* 9) Status line (chat has ended) */
+  --system-status-margin-top: 15px;
+  --system-status-margin-bottom: 15px;
+  --system-status-font-size-reset: 0;
+  
+  --system-status-text: "Chat byl ukončen";
+  --system-status-color: #656D75;
+  --system-status-size: 13.5px;
+  --system-status-weight: 700;
+  --system-status-line-height: 1.4;
+  --system-status-bg: transparent;
+  --system-status-padding: 0;
+  --system-status-line-color: #656D75;
+
+
+
+  /* 10) Carousel (cards with image, title, description, button) */
+  /* Structure */
+  --card-bg-color: #EDF0F7;
+  --card-radius: 20px;
+  --card-border: 1px solid transparent;
+  --card-overflow: hidden;
+
+  /* Image */
+  --card-img-width: calc(100% - 30px);
+  --card-img-height: auto;
+  --card-img-fit: cover;
+  --card-img-radius: 20px 20px 0 0;
+  --card-img-margin: 15px 15px 0 15px;
+
+  /* Header & Desc */
+  --card-header-size: 16px;
+  --card-header-weight: 700;
+  --card-header-color: #3E68A7;
+  --card-header-spacing: 0.02em;
+  --card-header-padding: 0;
+  --card-header-margin-top: 0;
+  --card-header-line-height: 1.4;
+
+  --card-desc-size: 12px;
+  --card-desc-color: #000000;
+  --card-desc-line-height: 1.5;
+  --card-desc-padding: 0;
+  --card-desc-weight: normal;
+  --card-desc-letter-spacing: normal;
+  --card-content-padding: 15px;
+
+  /* Card Button */
+  --card-btn-height: 45px;
+  --card-btn-radius: 30px;
+  --card-btn-padding-top: 2px;
+  --card-btn-font-size: 14.5px;
+  --card-btn-font-weight: 700;
+  --card-btn-spacing: 0.05em;
+  --card-btn-line-height: normal;
+  --card-btn-shadow: none;
+  --card-btn-overflow: hidden;
+  --card-btn-cursor: pointer;
+  --card-btn-transition: background .2s ease, border .2s ease, color .3s ease;
+  --card-btn-focus-outline: none;
+  --card-btn-focus-shadow: 0 0 0 3px rgba(0, 123, 204, 0.25);
+
+  /* Card Button Colors */
+  --card-btn-bg: #29456F;
+  --card-btn-text-color: #FFF600;
+  --card-btn-border: 2px solid #29456F;
+  
+  --card-btn-bg-hover: #29456F;
+  --card-btn-text-color-hover: #FFF600;
+  --card-btn-border-hover: 2px solid #29456F;
+
+  /* Card Button Extras */
+  --card-btn-shine-display: none;
+  --card-btn-shine-color: linear-gradient(115deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.32) 50%, rgba(255, 255, 255, 0) 100%);
+  
+  --card-btn-icon-url: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-link.svg");
+  --card-btn-icon-display: block;
+  --card-btn-icon-size: 14px;
+  --card-btn-icon-gap: 9px;
+  --card-btn-icon-move: 0px;
+
+  /* Carousel Navigation */
+  --carousel-icon-url: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-arrow-carousel.svg");
+  --carousel-rotate-left: 0deg;
+  --carousel-rotate-right: 0deg;
+  --carousel-btn-size: 42px;
+  --carousel-btn-radius: 50%;
+  --carousel-btn-bg: #3E68A7;
+  --carousel-btn-border: 2px solid #FFFFFF;
+  --carousel-btn-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --carousel-btn-z-index: 2;
+  --carousel-btn-transition: transform 0.2s ease, background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+  --carousel-icon-inner-size: 22px 22px;
+  
+  --carousel-btn-bg-hover: #FFFFFF;
+  --carousel-btn-border-hover: 2px solid #3E68A7;
+  --carousel-btn-scale-hover: 1.08;
+  --carousel-icon-url-hover: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-arrow-carousel.svg");
+
+
+  /* 11) AI badge and scroll button */
+  --ai-icon-image: url('https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-ai-sparkles.png');
+  --ai-icon-width: 26px;
+  --ai-icon-height: 26px;
+  --ai-label-bg: #3E68A7;
+  --ai-label-radius: 0 0 20px 20px;
+  --ai-label-padding: 9px 16px 8px;
+  --ai-label-gap: 7px;
+  
+  --ai-badge-text: "Odpověď byla vygenerována pomocí AI";
+  --ai-text-color: #FFFFFF;
+  --ai-text-weight: 600;
+  --ai-text-size: 13px;
+  --ai-text-line-height: normal;
+  --ai-text-letter-spacing: normal;
+
+  /* Scroll Button */
+  --scroll-btn-bg-color: #FFFFFF;
+  --scroll-btn-icon: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-scroll-down.svg");
+  --scroll-btn-size: 16px 16px;
+  --scroll-btn-border: 2px solid #3E68A7;
+
+
+  /* 12) Footer input and send button */
+  /* Placeholder */
+  --input-placeholder-size: 16px;
+  --input-placeholder-spacing: 0.03em;
+  --input-placeholder-color: #6A6A6A;
+  --input-placeholder-opacity: 1;
+  --input-placeholder-weight: normal;
+
+  /* Input Container */
+  --input-bg-color: #FFFFFF;
+  --input-border: 1px solid #E2E4E5;
+  --input-radius: 25px;
+  --input-shadow: 0 3px 4px #3E68A705, 0 8px 42px -16px #3E68A714;
+  --input-padding: 8px 8px 8px 20px;
+  --input-transition: border .15s ease, box-shadow .15s ease, border-radius .15s ease, opacity .15s ease;
+  --input-scrollbar-width: none;
+  --input-textarea-border-color: transparent;
+  --input-resize: none;
+  --input-outline: transparent 0px;
+
+  /* Input Text */
+  --input-font-size: 15.5px;
+  --input-text-color: #1A1E23;
+  --input-line-height: 20px;
+  --input-text-padding: 2px 0 0;
+
+  /* Send Button */
+  --send-btn-size: 40px;
+  --send-btn-radius: 50%;
+  --send-icon-size: 28px;
+  --send-icon-url: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-send.svg");
+  --send-btn-transition: all 0.2s ease;
+  --send-btn-border: none;
+  
+  --send-btn-disabled-bg: #F1F2F2;
+  --send-btn-disabled-color: #656D75;
+  
+  --send-btn-enabled-bg: #3E68A7;
+  --send-btn-enabled-color: #FFFFFF;
+  --send-btn-shadow: 0 -1px rgba(0, 0, 0, 0.16) inset;
+  
+  --send-btn-hover-bg: #3E68A7;
+  --send-btn-hover-scale: 1.05;
+
+
+  /* 13) Footer logo and launcher */
+  --footer-logo-image: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/badge-powered-by-trix-white.png");
+  --footer-logo-width: 160px;
+  --footer-logo-height: 40px;
+
+  /* Launcher Positioning */
+  --pos-bottom: 20px;
+  --pos-right: 20px;
+  --launcher-container-z-index: 100;
+
+  /* Open Button */
+  --btn-size: 75px;
+  --bg-color: linear-gradient(to right, #3E68A7, #29456F);
+  --icon-size: 55px;
+  --launcher-open-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --launcher-open-transition: transform 0.2s ease-in-out;
+  --launcher-open-hover-scale: 1;
+  --launcher-border: none;
+
+  /* Close Button */
+  --close-btn-size: 0px;
+  --close-bg-color: linear-gradient(to right, #3E68A7, #29456F);
+  --close-icon-size: 0px;
+  --launcher-close-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --launcher-close-transition: transform 0.2s ease-in-out;
+  --launcher-close-hover-scale: 1;
+  
+  --launcher-icon-transition: transform 180ms ease;
+
+
+  /* 14) Privacy / GDPR popup */
+  /* Title */
+  --privacy-title-size: 18px;
+  --privacy-title-weight: 700;
+  --privacy-title-line-height: 1.5;
+  --privacy-title-color: #1A1E23;
+  --privacy-title-align: center;
+  --privacy-title-spacing: -0.01em;
+  --privacy-title-margin: 0 0 12px 0;
+
+  /* Text */
+  --privacy-text-size: 15.5px;
+  --privacy-text-line-height: 1.5;
+  --privacy-text-color: #464B52;
+  --privacy-text-align: center;
+  --privacy-text-margin: 0;
+  --privacy-text-weight: normal;
+  --privacy-text-letter-spacing: normal;
+
+  /* Icon */
+  --privacy-icon-size: 22px;
+  --privacy-icon-url: url("https://trixtecheu.github.io/municipalities/nezamyslice/images/icons/icon-lock.png");
+  --privacy-icon-margin: 0;
+  --privacy-icon-transform: translateY(0px);
+
+  /* Buttons */
+  --privacy-btn-radius: 30px;
+  --privacy-btn-padding: 12px 16px;
+  --privacy-btn-font-size: 16px;
+  --privacy-btn-weight: 700;
+  --privacy-btn-spacing: 0.05em;
+  --privacy-btn-line-height: 1.4;
+  --privacy-btn-transition: background .2s ease;
+
+  /* Primary (Accept) */
+  --privacy-pri-bg: #29456F;
+  --privacy-pri-text: #FFF600;
+  --privacy-pri-border: 2px solid #29456F;
+  
+  --privacy-pri-bg-hover: #29456F;
+  --privacy-pri-text-hover: #FFF600;
+  --privacy-pri-border-hover: 2px solid #29456F;
+  
+  --privacy-pri-shine-display: none;
+  --privacy-pri-shine-color: linear-gradient(115deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.32) 50%, rgba(255, 255, 255, 0) 100%);
+
+  /* Secondary (Decline) */
+  --privacy-sec-bg: #FFFFFF;
+  --privacy-sec-text: #1A1E23;
+  --privacy-sec-border: 1px solid #E5E7EB;
+  --privacy-sec-bg-hover: #F7F7F7;
+
+
+  /* 15) Chat window and responsive */
+  --chat-bg-color: #FFFFFF;
+  --chat-radius: 25px;
+  --chat-shadow: 0 0 0 1px rgba(22, 26, 30, 0.06), 0 8px 80px rgba(22, 26, 30, 0.16);
+
+  /* Desktop */
+  --chat-desktop-width: 460px;
+  --chat-desktop-right: 10px;
+  --chat-desktop-bottom: 6px;
+  --chat-height-percent: 112%;
+  --chat-height-minus: 104px;
+  --chat-z-index: 9999;
+
+  /* Mobile */
+  --chat-mobile-right: 0;
+  --chat-mobile-bottom: 0;
+  --chat-mobile-width: 100%;
+  --chat-mobile-height: 100%;
+  --chat-mobile-radius: 0;
+  --chat-mobile-inner-radius: 0;
+  --chat-mobile-shadow: none;
+}
